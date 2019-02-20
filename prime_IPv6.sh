@@ -84,7 +84,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget http://scripts.primestone.global/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -122,7 +122,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget http://scripts.primestone.global/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -178,10 +178,10 @@ cd ~
 rm -fr prime*.zip
 rm -R -fr prime_linux
             if [ "$OS_version" -eq "1" ]; then
-                wget http://scripts.primestone.global/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget http://scripts.primestone.global/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //

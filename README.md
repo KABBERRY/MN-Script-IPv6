@@ -1,7 +1,7 @@
 # MN-Script-IPv6
 
 <br>Setup/Update/Reinstall Primestone Masternode IPv6 scrypt:
-<br>apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s https://github.com/Primestonecoin/MN-Script-IPv6/blob/master/prime_IPv6.sh) | tee ~/prime_masternode_installation.log
+apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com/Primestonecoin/MN-Script-IPv6/master/prime_IPv6.sh) | tee ~/prime_masternode_installation.log
 
 
 <br>WEBSITE PRIMESTONE

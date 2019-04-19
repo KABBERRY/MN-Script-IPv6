@@ -153,7 +153,7 @@ if [ "$OS_version" -eq "1" ]; then
 	if [ $? -ne "0" ]; then echo "Unable to install libdb dependencies" && exit 1; fi
         sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils software-properties-common libminiupnpc-dev libcrypto++-dev libboost-all-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev libboost-thread-dev libssl-dev libssl-dev software-properties-common unzip libzmq3-dev ufw wget git python-openssl -y
 		if [ $? -ne "0" ]; then echo "Unable to install major dependencies" && exit 1; fi
-		sudo wget https://github.com/Primestonecoin/MN-Script-IPv6/blob/master/libs.zip
+		sudo wget https://github.com/Primestonecoin/MN-Script-IPv4/raw/master/libs.zip
 		unzip -o libs.zip
 		sudo cp -fr libboost_filesystem.so.1.58.0 libboost_chrono.so.1.58.0 libboost_program_options.so.1.58.0 libboost_system.so.1.58.0 libboost_thread.so.1.58.0 libminiupnpc.so.10 libevent_core-2.0.so.5 libevent_pthreads-2.0.so.5 libevent-2.0.so.5 /usr/lib/
 		rm -fr libboost_filesystem.so.1.58.0 libboost_chrono.so.1.58.0 libboost_program_options.so.1.58.0 libboost_system.so.1.58.0 libboost_thread.so.1.58.0 libminiupnpc.so.10 libevent_core-2.0.so.5 libevent_pthreads-2.0.so.5 libevent-2.0.so.5 libs.zip

@@ -2,18 +2,18 @@
 
 #:: Primestone team
 #:: Copyright // 2019-01-01
-#:: Version: v2.0
+#:: Version: v2.1
 #:: Tested on Ubuntu 18.04 & Ubuntu 16.04
 cat << "PSC"
 
 
 
-  _____   _____  _____        ___    ___     _____ ______ _______ _    _ _____  
- |  __ \ / ____|/ ____|      |__ \  / _ \   / ____|  ____|__   __| |  | |  __ \ 
- | |__) | (___ | |      __   __ ) || | | | | (___ | |__     | |  | |  | | |__) |
- |  ___/ \___ \| |      \ \ / // / | | | |  \___ \|  __|    | |  | |  | |  ___/ 
- | |     ____) | |____   \ V // /_ | |_| |  ____) | |____   | |  | |__| | |     
- |_|    |_____/ \_____|   \_/|____(_)___/  |_____/|______|  |_|   \____/|_|     
+  _____   _____  _____        ___      _____ ______ _______ _    _ _____  
+ |  __ \ / ____|/ ____|      |__ \    / ____|  ____|__   __| |  | |  __ \ 
+ | |__) | (___ | |      __   __ ) |  | (___ | |__     | |  | |  | | |__) |
+ |  ___/ \___ \| |      \ \ / // /    \___ \|  __|    | |  | |  | |  ___/ 
+ | |     ____) | |____   \ V // /__   ____) | |____   | |  | |__| | |     
+ |_|    |_____/ \_____|   \_/|____/  |_____/|______|  |_|   \____/|_|     
                                                                                 
  
  
@@ -28,7 +28,7 @@ echo ""
 echo "Good day. This is automated cold masternode setup for Primestone project. Auto installer was tested on specific environment. Don't try to install masternode with undocumented operating system!"
 echo ""
 echo "Installation content:"
-echo "primestone core v2.0"
+echo "primestone core v2.1"
 echo
 echo "Setup can be launched"
 echo "Do you agree?"
@@ -84,7 +84,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -122,7 +122,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -178,10 +178,10 @@ cd ~
 rm -fr prime*.zip
 rm -R -fr prime_linux
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/2.0.1/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //

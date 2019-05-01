@@ -11,18 +11,20 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br>GITHUB
 <br>https://github.com/Primestonecoin
 
-<br>PRIMESTONE WALLETS 2.0
+<br>PRIMESTONE WALLETS 2.1
 
-<br>Windows wallet 2.0
-<br>http://scripts.primestone.global/prime_windows.zip
-<br>Linux wallet 2.0
-<br>http://scripts.primestone.global/prime_linux.zip
+<br> Windows wallet 2.1 64bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_windows_x64.zip
+<br> Windows wallet 2.1 32bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_windows_x86.zip
+<br> Linux wallet 2.1
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip
 
 <br>PRIMESTONE MASTERNODE SETUP MANUALS
 
-<br>Masternode SETUP (windows) 1.3-2.0 version
+<br>Masternode SETUP (windows) 1.3-2.1 version
 <br>http://scripts.primestone.global/MasterNode_WIN_ENG.pdf
-<br>Masternode CLEAR SETUP 1.3-2.0 version (VPS)
+<br>Masternode CLEAR SETUP 1.3-2.1 version (VPS)
 <br>http://scripts.primestone.global/Masternode_SETUP_VPS_1.3.pdf
 
 <br>MASTERNODE HOSTING & SHARED NODE SERVICES
@@ -39,9 +41,7 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br>http://p.hostmasternode.com/
 
 <br>COIN INFO
-
-<br>PrimeStone Presentation
-<br>https://primestone.global/wp-content/uploads/2018/11/The-PrimeStone-Project-.pdf
+ 
 <br>Whitepaper
 <br>https://primestone.global/wp-content/uploads/2018/06/Primestone-WhitePaper.pdf
 <br>Documentation

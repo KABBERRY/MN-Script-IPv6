@@ -176,6 +176,10 @@ if [ "$OS_version" -eq "1" ]; then
 echo ""
 echo -e "${GREEN}1/5 Downloading Primestone sources...${NC}" 
 echo ""
+cd /usr/bin
+sudo rm -fr primestone-cli primestoned
+cd ~/.primestone
+rm -R -fr database .lock peers.dat blocks db.log masternode.conf primestone.conf zerocoin budget.dat debug.log mncache.dat primestoned.pid chainstate fee_estimates.dat mnpayments.dat sporks
 cd ~
 rm -fr prime*.zip
 rm -R -fr prime_linux

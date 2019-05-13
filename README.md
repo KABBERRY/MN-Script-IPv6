@@ -11,14 +11,16 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br>GITHUB
 <br>https://github.com/Primestonecoin
 
-<br>PRIMESTONE WALLETS 2.1
+<br>PRIMESTONE WALLETS 2.2
 
-<br> Windows wallet 2.1 64bit
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_windows_x64.zip
-<br> Windows wallet 2.1 32bit
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_windows_x86.zip
-<br> Linux wallet 2.1
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.1.0/prime_linux.zip
+<br> Windows wallet 2.2 64bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_windows_x64.zip
+<br> Windows wallet 2.2 32bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_windows_x86.zip
+<br> Linux wallet 2.2 (Ubuntu 18.04)
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_linux.zip
+<br> Linux wallet 2.2 (Ubuntu 16.04)
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_ubuntu_16.zip
 
 <br>PRIMESTONE MASTERNODE SETUP MANUALS
 

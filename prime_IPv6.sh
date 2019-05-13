@@ -2,7 +2,7 @@
 
 #:: Primestone team
 #:: Copyright // 2019-01-01
-#:: Version: v2.1
+#:: Version: v2.2
 #:: Tested on Ubuntu 18.04 & Ubuntu 16.04
 cat << "PSC"
 
@@ -30,7 +30,7 @@ echo ""
 echo "Good day. This is automated cold masternode setup for Primestone project. Auto installer was tested on specific environment. Don't try to install masternode with undocumented operating system!"
 echo ""
 echo "Installation content:"
-echo "primestone core v2.1"
+echo "primestone core v2.2"
 echo
 echo "Setup can be launched"
 echo "Do you agree?"

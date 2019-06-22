@@ -2,21 +2,21 @@
 
 #:: Primestone team
 #:: Copyright // 2019-01-01
-#:: Version: v2.2
+#:: Version: v2.3
 #:: Tested on Ubuntu 18.04 & Ubuntu 16.04
 cat << "PSC"
 
 
 
 
-  _____   _____  _____   ___    ___     _____ ______ _______ _    _ _____  
- |  __ \ / ____|/ ____| |__ \  |__ \   / ____|  ____|__   __| |  | |  __ \ 
- | |__) | (___ | |         ) |    ) | | (___ | |__     | |  | |  | | |__) |
- |  ___/ \___ \| |        / /    / /   \___ \|  __|    | |  | |  | |  ___/ 
- | |     ____) | |____   / /_ _ / /_   ____) | |____   | |  | |__| | |     
- |_|    |_____/ \_____| |____(_)____| |_____/|______|  |_|   \____/|_|     
-                                                                           
-                                                                         
+  _____   _____  _____   ___    ____     _____ ______ _______ _    _ _____  
+ |  __ \ / ____|/ ____| |__ \  |___ \   / ____|  ____|__   __| |  | |  __ \ 
+ | |__) | (___ | |         ) |   __) | | (___ | |__     | |  | |  | | |__) |
+ |  ___/ \___ \| |        / /   |__ <   \___ \|  __|    | |  | |  | |  ___/ 
+ | |     ____) | |____   / /_ _ ___) |  ____) | |____   | |  | |__| | |     
+ |_|    |_____/ \_____| |____(_)____/  |_____/|______|  |_|   \____/|_|     
+                                                                            
+                                                                            
  
  
 PSC
@@ -30,7 +30,7 @@ echo ""
 echo "Good day. This is automated cold masternode setup for Primestone project. Auto installer was tested on specific environment. Don't try to install masternode with undocumented operating system!"
 echo ""
 echo "Installation content:"
-echo "primestone core v2.2"
+echo "primestone core v2.3"
 echo
 echo "Setup can be launched"
 echo "Do you agree?"
@@ -86,7 +86,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -124,11 +124,11 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_ubuntu_16.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_ubuntu_16.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
-					rm -fr primestone-cli primestoned primestone-tx primestone-qt prime_linux.zip &&
+					rm -fr primestone-cli primestoned primestone-tx primestone-qt prime_ubuntu_16.zip &&
 					cd /usr/bin &&
 					chmod -R 755 primestone-cli primestoned &&
 					cd ~ &&
@@ -184,17 +184,17 @@ cd ~
 rm -fr prime*.zip
 rm -R -fr prime_linux
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_ubuntu_16.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_ubuntu_16.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //
 unzip -o prime*.zip
 echo ""
 sudo cp -fr primestone-cli primestoned /usr/bin/
-rm -fr primestone-cli primestoned primestone-tx primestone-qt prime_linux.zip
+rm -fr primestone-cli primestoned primestone-tx primestone-qt prime_linux.zip prime_ubuntu_16.zip
 cd /usr/bin
 chmod -R 755 primestone-cli primestoned
 cd ~

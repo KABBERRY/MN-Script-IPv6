@@ -369,3 +369,4 @@ echo "Primestone Core datadir: "$(echo $HOME/.primestone/)""
 echo ""
 echo -e "Need additional help? Please visit Primestone Discord channel: ${GREEN}https://discord.gg/D6KeMSA${NC}"
 echo ""
+primestone-cli getinfo | grep blocks

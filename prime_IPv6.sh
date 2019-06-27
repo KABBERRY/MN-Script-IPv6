@@ -174,7 +174,7 @@ if [ "$OS_version" -eq "1" ]; then
         fi
 # Download primestone sources //
 echo ""
-echo -e "${GREEN}1/5 Downloading Primestone sources...${NC}" 
+echo -e "${GREEN}1/6 Downloading Primestone sources...${NC}" 
 echo ""
 cd /usr/bin
 sudo rm -fr primestone-cli primestoned
@@ -223,7 +223,7 @@ addnode=185.17.42.37
 EOF
 
 #Create primecore.service
-echo -e "${GREEN}2/5 Create primecore.service for systemd${NC}"
+echo -e "${GREEN}2/6 Create primecore.service for systemd${NC}"
 echo ""
 echo \
 "[Unit]
@@ -256,7 +256,7 @@ sudo chown -R $real_user:$real_user $(echo $HOME)/.primestone/
 
 # Check if user is root? If not create sudoers files to manage systemd services
 echo ""
-echo -e "${GREEN}3/5 Check if user is root? If not create sudoers files to manage systemd services${NC}"
+echo -e "${GREEN}3/6 Check if user is root? If not create sudoers files to manage systemd services${NC}"
 if [ "$EUID" -ne 0 ]; then
 sudo echo \
 "%$real_user ALL= NOPASSWD: /bin/systemctl start primecore
@@ -335,7 +335,7 @@ addnode=185.17.42.37
 EOF
 
 # Firewall //
-echo -e "${GREEN}4/5 Update firewall rules${NC}"
+echo -e "${GREEN}4/6 Update firewall rules${NC}"
 echo ""
 echo "Update firewall rules"
 sudo /usr/sbin/ufw limit ssh/tcp comment 'Rate limit for openssh server' 
@@ -343,9 +343,20 @@ sudo /usr/sbin/ufw allow 34124/tcp comment 'Primestone Wallet daemon'
 sudo /usr/sbin/ufw --force enable
 echo ""
 
+# Fast download Blockchain
+echo ""
+echo -e "${GREEN}5/6 please wait, installation script downloads Prinestone blockchain ${NC}"
+echo ""
+cd ~
+cd .primestone
+rm -R blocks chainstate
+wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/primestone-blockchain.zip
+unzip -o primestone-blockchain.zip
+rm -f  primestone-blockchain.zip
+
 # Final start
 echo ""
-echo -e "${GREEN}5/5 Masternode config done, Primestone wallet installed - starting again${NC}"
+echo -e "${GREEN}6/6 Masternode config done, Primestone wallet installed - starting again${NC}"
 echo ""
 sudo systemctl start primecore
 echo -e "${RED}The blockchain is syncing from scratch. You have to wait few hours to sync all the blocks!${NC}"

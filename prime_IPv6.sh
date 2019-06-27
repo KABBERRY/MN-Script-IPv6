@@ -350,7 +350,7 @@ rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Primestone blockchain ${NC}"
 echo ""
-wget -q https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/primestone-blockchain.zip
+wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/primestone-blockchain.zip
 unzip -o primestone-blockchain.zip
 rm -f  primestone-blockchain.zip
 

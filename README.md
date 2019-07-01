@@ -11,22 +11,22 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br>GITHUB
 <br>https://github.com/Primestonecoin
 
-<br>PRIMESTONE WALLETS 2.2
+<br>PRIMESTONE WALLETS 2.3
 
-<br> Windows wallet 2.2 64bit
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_windows_x64.zip
-<br> Windows wallet 2.2 32bit
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_windows_x86.zip
-<br> Linux wallet 2.2 (Ubuntu 18.04)
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_linux.zip
-<br> Linux wallet 2.2 (Ubuntu 16.04)
-<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.2.1/prime_ubuntu_16.zip
+<br> Windows wallet 2.3 64bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_windows_x64.zip
+<br> Windows wallet 2.3 32bit
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_windows_x86.zip
+<br> Linux wallet 2.3 (Ubuntu 18.04)
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_linux.zip
+<br> Linux wallet 2.3 (Ubuntu 16.04)
+<br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_ubuntu_16.zip
 
 <br>PRIMESTONE MASTERNODE SETUP MANUALS
 
-<br>Masternode SETUP (windows) 1.3-2.1 version
+<br>Masternode SETUP (windows) 1.3-2.3 version
 <br>http://scripts.primestone.global/MasterNode_WIN_ENG.pdf
-<br>Masternode CLEAR SETUP 1.3-2.1 version (VPS)
+<br>Masternode CLEAR SETUP 1.3-2.3 version (VPS)
 <br>http://scripts.primestone.global/Masternode_SETUP_VPS_1.3.pdf
 
 <br>MASTERNODE HOSTING & SHARED NODE SERVICES

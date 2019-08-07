@@ -86,7 +86,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_linux.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.1/prime_linux.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&
@@ -124,7 +124,7 @@ read wan
 					cd ~ &&
 					rm -fr primestone-cli primestoned primestone-tx prime_linux.zip &&
 					echo -e "${GREEN}2/5 Old Primestone wallet is deleted${NC}" &&
-					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_ubuntu_16.zip &&
+					wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.1/prime_ubuntu_16.zip &&
 					echo -e "${GREEN}3/5 Primestone wallet is downloaded${NC}" &&
 					unzip -o prime*.zip &&
 					sudo cp -fr primestone-cli primestoned /usr/bin/ &&

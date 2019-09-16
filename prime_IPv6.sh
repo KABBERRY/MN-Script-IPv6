@@ -184,10 +184,10 @@ cd ~
 rm -fr prime*.zip
 rm -R -fr prime_linux
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_linux.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.1.0/prime_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.0/prime_ubuntu_16.zip
+                wget https://github.com/Primestonecoin/PrimeStone/releases/download/v2.3.1.0/prime_ubuntu_16.zip
 		if [ $? -ne "0" ]; then echo "Failed to download primestoned binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //

@@ -1,15 +1,15 @@
 # MN-Script-IPv6
 
-<br>Setup/Update/Reinstall Primestone Masternode IPv6 scrypt:
+<br>Setup/Update/Reinstall Kabberry Masternode IPv6 scrypt:
 apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com/Primestonecoin/MN-Script-IPv6/master/prime_IPv6.sh) | tee ~/prime_masternode_installation.log
 
 
-<br>WEBSITE PRIMESTONE
-<br>https://primestone.global/
+<br>WEBSITE KABBERRY
+<br>https://kabberry.com/
 <br>BLOCK EXPLORER
-<br>http://primestone-explorer.com/
+<br>http://explorer.kabberry.com/
 <br>GITHUB
-<br>https://github.com/Primestonecoin
+<br>https://github.com/KABBERRY
 
 <br>PRIMESTONE WALLETS 2.4
 
@@ -22,7 +22,7 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br> Linux wallet 2.4 (Ubuntu 16.04)
 <br> https://github.com/Primestonecoin/PrimeStone/releases/download/v2.4.0/prime_ubuntu_16.zip
 
-<br>PRIMESTONE MASTERNODE SETUP MANUALS
+<br>KABBERRY MASTERNODE SETUP MANUALS
 
 <br>Masternode SETUP (windows) 1.3-2.4 version
 <br>http://scripts.primestone.global/MasterNode_WIN_ENG.pdf

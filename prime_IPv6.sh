@@ -2,7 +2,7 @@
 
 #:: Kabberry team
 #:: Copyright // 2019-01-01
-#:: Version: v2.5
+#:: Version: v3.0
 #:: Tested on Ubuntu 18.04 & Ubuntu 16.04
 cat << "PSC"
 
@@ -32,7 +32,7 @@ echo ""
 echo "Good day. This is automated cold masternode setup for Kabberry project. Auto installer was tested on specific environment. Don't try to install masternode with undocumented operating system!"
 echo ""
 echo "Installation content:"
-echo "kabberry core v2.5"
+echo "kabberry core v3.0"
 echo
 echo "Setup can be launched"
 echo "Do you agree?"
@@ -81,14 +81,14 @@ read wan
 					echo -e "${GREEN}i${NC}/${RED}u"${NC}?
 					read setorupd
 					if [ "$setorupd" = "u" ]; then
-					sudo systemctl stop primecore &&
+					sudo systemctl stop kabberrycore &&
 					echo -e "${GREEN}1/5 Kabberry service is stopped${NC}" &&
 					cd /usr/bin &&
 					sudo rm -fr kabberry-cli kabberryd &&
 					cd ~ &&
 					rm -fr kabberry-cli kabberryd kabberry-tx kabberry_linux.zip &&
 					echo -e "${GREEN}2/5 Old Kabberry wallet is deleted${NC}" &&
-					wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_linux.zip &&
+					wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_linux.zip &&
 					echo -e "${GREEN}3/5 Kabberry wallet is downloaded${NC}" &&
 					unzip -o kabberry*.zip &&
 					sudo cp -fr kabberry-cli kabberryd /usr/bin/ &&
@@ -97,11 +97,11 @@ read wan
 					chmod -R 755 kabberry-cli kabberryd &&
 					cd ~ &&
 					echo -e "${GREEN}4/5 Kabberry wallet is updated${NC}" &&
-					sudo systemctl start primecore &&
+					sudo systemctl start kabberrycore &&
 					echo -e "${GREEN}5/5 Kabberry service is started${NC}" &&
 					echo -e "${GREEN}Update is full completed.${NC}" && exit 1; fi
 					if [ "$setorupd" = "i" ]; then
-					sudo systemctl stop primecore &&
+					sudo systemctl stop kabberrycore &&
 					echo "" &&
 					echo -e "${GREEN}Setup Kabberry masternode started${NC}" &&
 					sleep 5
@@ -119,14 +119,14 @@ read wan
 					echo -e "${GREEN}i${NC}/${RED}u"${NC}?
 					read setorupd
 					if [ "$setorupd" = "u" ]; then
-					sudo systemctl stop primecore &&
+					sudo systemctl stop kabberrycore &&
 					echo -e "${GREEN}1/5 Kabberry service is stopped${NC}" &&
 					cd /usr/bin &&
 					sudo rm -fr kabberry-cli kabberryd &&
 					cd ~ &&
 					rm -fr kabberry-cli kabberryd kabberry-tx kabberry_linux.zip &&
 					echo -e "${GREEN}2/5 Old Kabberry wallet is deleted${NC}" &&
-					wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_ubuntu_16.zip &&
+					wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_ubuntu_16.zip &&
 					echo -e "${GREEN}3/5 Kabberry wallet is downloaded${NC}" &&
 					unzip -o kabberry*.zip &&
 					sudo cp -fr kabberry-cli kabberryd /usr/bin/ &&
@@ -135,11 +135,11 @@ read wan
 					chmod -R 755 kabberry-cli kabberryd &&
 					cd ~ &&
 					echo -e "${GREEN}4/5 Kabberry wallet is updated${NC}" &&
-					sudo systemctl start primecore &&
+					sudo systemctl start kabberrycore &&
 					echo -e "${GREEN}5/5 Kabberry service is started${NC}" &&
 					echo -e "${GREEN}Update is full completed.${NC}" && exit 1; fi
 					if [ "$setorupd" = "i" ]; then
-					sudo systemctl stop primecore &&
+					sudo systemctl stop kabberrycore &&
 					echo "" &&
 					echo -e "${GREEN}Setup Kabberry masternode started${NC}" &&
 					sleep 5
@@ -182,17 +182,17 @@ echo -e "${GREEN}1/6 Downloading Kabberry sources...${NC}"
 echo ""
 cd /usr/bin
 sudo rm -fr kabberry-cli kabberryd
-cd ~/.primestone
-rm -R -fr database .lock peers.dat blocks db.log masternode.conf primestone.conf zerocoin budget.dat debug.log mncache.dat primestoned.pid chainstate fee_estimates.dat mnpayments.dat sporks
+cd ~/.kabberry
+rm -R -fr database .lock peers.dat blocks db.log masternode.conf kabberry.conf zerocoin budget.dat debug.log mncache.dat kabberryd.pid chainstate fee_estimates.dat mnpayments.dat sporks
 cd ~
 rm -fr kabberry*.zip
 rm -R -fr kabberry_linux
 
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_linux.zip
+                wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_linux.zip
 		if [ $? -ne "0" ]; then echo "Failed to download kabberryd binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_ubuntu_16.zip
+                wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_ubuntu_16.zip
 		if [ $? -ne "0" ]; then echo "Failed to download kabberryd binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //
@@ -203,13 +203,13 @@ rm -fr kabberry-cli kabberryd kabberry-tx kabberry-qt kabberry_linux.zip kabberr
 cd /usr/bin
 chmod -R 755 kabberry-cli kabberryd
 cd ~
-mkdir -p ~/.primestone/
-touch ~/.primestone/primestone.conf
-cat << EOF > ~/.primestone/primestone.conf
+mkdir -p ~/.kabberry/
+touch ~/.kabberry/kabberry.conf
+cat << EOF > ~/.kabberry/kabberry.conf
 rpcuser=kabberryuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
-primestonestake=1
+kabberrystake=1
 rpcport=34126
 listen=1
 port=34124
@@ -222,8 +222,8 @@ addnode=77.55.216.249
 
 EOF
 
-#Create primecore.service
-echo -e "${GREEN}2/6 Create primecore.service for systemd${NC}"
+#Create kabberrycore.service
+echo -e "${GREEN}2/6 Create kabberrycore.service for systemd${NC}"
 echo ""
 echo \
 "[Unit]
@@ -233,8 +233,8 @@ After=network.target
 [Service]
 User=root
 Type=forking
-ExecStart=/usr/bin/kabberryd -daemon -pid=$(echo $HOME)/.primestone/primestoned.pid --datadir=$(echo $HOME)/.primestone/
-PIDFile=$(echo $HOME)/.primestone/primestoned.pid
+ExecStart=/usr/bin/kabberryd -daemon -pid=$(echo $HOME)/.kabberry/kabberryd.pid --datadir=$(echo $HOME)/.kabberry/
+PIDFile=$(echo $HOME)/.kabberry/kabberryd.pid
 ExecStop=/usr/bin/kabberry-cli stop
 Restart=always
 RestartSec=3600
@@ -244,29 +244,29 @@ StartLimitInterval=120s
 StartLimitBurst=5
 
 [Install]
-WantedBy=default.target" | sudo tee /etc/systemd/system/primecore.service
+WantedBy=default.target" | sudo tee /etc/systemd/system/kabberrycore.service
 
-sudo chmod 664 /etc/systemd/system/primecore.service
+sudo chmod 664 /etc/systemd/system/kabberrycore.service
 
-sudo systemctl enable primecore
+sudo systemctl enable kabberrycore
 
 real_user=$(echo $USER) 
 
-sudo chown -R $real_user:$real_user $(echo $HOME)/.primestone/
+sudo chown -R $real_user:$real_user $(echo $HOME)/.kabberry/
 
 # Check if user is root? If not create sudoers files to manage systemd services
 echo ""
 echo -e "${GREEN}3/6 Check if user is root? If not create sudoers files to manage systemd services${NC}"
 if [ "$EUID" -ne 0 ]; then
 sudo echo \
-"%$real_user ALL= NOPASSWD: /bin/systemctl start primecore
-%$real_user ALL= NOPASSWD: /bin/systemctl stop primecore
-%$real_user ALL= NOPASSWD: /bin/systemctl restart primecore" | sudo tee /tmp/$real_user
+"%$real_user ALL= NOPASSWD: /bin/systemctl start kabberrycore
+%$real_user ALL= NOPASSWD: /bin/systemctl stop kabberrycore
+%$real_user ALL= NOPASSWD: /bin/systemctl restart kabberrycore" | sudo tee /tmp/$real_user
 sudo mv /tmp/$(echo $real_user) /etc/sudoers.d/
 fi
 
 # Start kabberry daemon, wait for wallet creation //
-sudo systemctl start primecore &&
+sudo systemctl start kabberrycore &&
 echo "" ; echo "Please wait for few minutes..."
 sleep 120 &
 PID=$!
@@ -278,9 +278,9 @@ do
   printf "\b${sp:i++%${#sp}:1}"
 done
 echo ""
-sudo systemctl stop primecore &&
+sudo systemctl stop kabberrycore &&
 echo ""
-echo -e "Shutting down daemon, reconfiguring primestone.conf, we want to know your cold wallet ${GREEN}masternodeprivkey${NC} (example: 7UwDGWAKNCAvyy9MFEnrf4JBBL2aVaDm2QzXqCQzAugULf7PUFD), please input now:"
+echo -e "Shutting down daemon, reconfiguring kabberry.conf, we want to know your cold wallet ${GREEN}masternodeprivkey${NC} (example: 7UwDGWAKNCAvyy9MFEnrf4JBBL2aVaDm2QzXqCQzAugULf7PUFD), please input now:"
 echo""
 read masternodeprivkey
 privkey=$(echo $masternodeprivkey)
@@ -310,11 +310,11 @@ while [ -d /proc/$PID ]
 do
   printf "\b${sp:i++%${#sp}:1}"
 done
-cat << EOF > ~/.primestone/primestone.conf
+cat << EOF > ~/.kabberry/kabberry.conf
 rpcuser=kabberryuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
-primestonestake=1
+kabberrystake=1
 rpcport=34126
 listen=1
 port=34124
@@ -340,27 +340,27 @@ echo ""
 
 # Fast download Blockchain
 cd ~
-cd .primestone
+cd .kabberry
 rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Kabberry blockchain ${NC}"
 echo ""
-wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.4.0/primestone-blockchain.zip
-unzip -o primestone-blockchain.zip
-rm -f  primestone-blockchain.zip
+wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.4.0/kabberry-blockchain.zip
+unzip -o kabberry-blockchain.zip
+rm -f  kabberry-blockchain.zip
 
 # Final start
 echo ""
 echo -e "${GREEN}6/6 Masternode config done, Kabberry wallet installed - starting again${NC}"
 echo ""
-sudo systemctl start primecore
+sudo systemctl start kabberrycore
 echo -e "${RED}The blockchain is syncing from scratch. You have to wait few hours to sync all the blocks!${NC}"
 echo ""
 echo "Setup summary:"
 echo "Masternode privkey: $privkey"
 echo "Your external IPv6 addr: $wanipv6"
 echo "Installation log: ~/kabberry_masternode_installation.log"
-echo "Kabberry Core datadir: "$(echo $HOME/.primestone/)""
+echo "Kabberry Core datadir: "$(echo $HOME/.kabberry/)""
 echo ""
 echo -e "Need additional help? Please visit Kabberry Discord channel: ${GREEN}https://discord.gg/D6KeMSA${NC}"
 echo ""

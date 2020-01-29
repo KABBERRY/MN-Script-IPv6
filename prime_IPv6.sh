@@ -345,7 +345,7 @@ rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Kabberry blockchain ${NC}"
 echo ""
-wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.4.0/kabberry-blockchain.zip
+wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry-blockchain.zip
 unzip -o kabberry-blockchain.zip
 rm -f  kabberry-blockchain.zip
 

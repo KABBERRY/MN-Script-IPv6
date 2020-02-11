@@ -280,22 +280,22 @@ done
 echo ""
 sudo systemctl stop kabberrycore &&
 echo ""
-echo -e "Shutting down daemon, reconfiguring kabberry.conf, we want to know your cold wallet ${GREEN}masternodeprivkey${NC} (example: 7UwDGWAKNCAvyy9MFEnrf4JBBL2aVaDm2QzXqCQzAugULf7PUFD), please input now:"
+echo -e "Shutting down daemon, reconfiguring kabberry.conf, we want to know your cold wallet ${GREEN}createmasternodekey${NC} (example: 887Bmc8UCAuvttkt3vhFgiWCd2P6NqFpyrQZSTYbrkLpNZ1LjCL), please input now:"
 echo""
-read masternodeprivkey
-privkey=$(echo $masternodeprivkey)
-checkpriv_key=$(echo $masternodeprivkey | wc -c)
+read createmasternodekey
+privkey=$(echo $createmasternodekey)
+checkpriv_key=$(echo $createmasternodekey | wc -c)
 if [ "$checkpriv_key" -ne "52" ];
 then
 	echo ""
 	echo "Looks like your $privkey is not correct, it should cointain 52 symbols, please paste it one more time"
-	read masternodeprivkey
-privkey=$(echo $masternodeprivkey)
-checkpriv_key=$(echo $masternodeprivkey | wc -c)
+	read createmasternodekey
+privkey=$(echo $createmasternodekey)
+checkpriv_key=$(echo $createmasternodekey | wc -c)
 
 if [ "$checkpriv_key" -ne "52" ];
 then
-        echo "Something wrong with masternodeprivkey, cannot continue" && exit 1
+        echo "Something wrong with createmasternodekey, cannot continue" && exit 1
 fi
 fi
 echo ""
@@ -322,7 +322,7 @@ rpcallowip=127.0.0.1
 daemon=1
 masternode=1
 masternodeaddr=[$wanipv6]
-masternodeprivkey=$privkey
+createmasternodekey=$privkey
 addnode=77.55.217.107
 addnode=89.65.101.63
 addnode=77.55.216.249

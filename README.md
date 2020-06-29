@@ -1,6 +1,6 @@
 # MN-Script-IPv6
 
-<br>Setup/Update/Reinstall Kabberry Masternode IPv6 scrypt:
+<br>Setup/Update/Reinstall Kabberry Masternode IPv6 scrypt:<br>
 apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com/KABBERRY/MN-Script-IPv6/master/prime_IPv6.sh) | tee ~/prime_masternode_installation.log
 
 
@@ -11,16 +11,16 @@ apt-get update -y && cd ~/ && sudo apt-get install curl -y && bash <(curl -s htt
 <br>GITHUB
 <br>https://github.com/KABBERRY
 
-<br>PRIMESTONE WALLETS 2.5
+<br>KABBERRY WALLETS 3.0
 
-<br> Windows wallet 2.5 64bit
-<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_windows_x64.zip
-<br> Windows wallet 2.5 32bit
-<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_windows_x86.zip
-<br> Linux wallet 2.5 (Ubuntu 18.04)
-<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_linux.zip
-<br> Linux wallet 2.5 (Ubuntu 16.04)
-<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v2.5.0/kabberry_ubuntu_16.zip
+<br> Windows wallet 3.0 64bit
+<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_win_x64.zip
+<br> Windows wallet 3.0 32bit
+<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_win_x86.zip
+<br> Linux wallet 3.0 (Ubuntu 18.04)
+<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_linux.zip
+<br> Linux wallet 3.0 (Ubuntu 16.04)
+<br> https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry_ubuntu_16.zip
 
 <br>KABBERRY MASTERNODE SETUP MANUALS
 

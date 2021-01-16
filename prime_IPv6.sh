@@ -280,22 +280,22 @@ done
 echo ""
 sudo systemctl stop kabberrycore &&
 echo ""
-echo -e "Shutting down daemon, reconfiguring kabberry.conf, we want to know your cold wallet ${GREEN}createmasternodekey${NC} (example: 887Bmc8UCAuvttkt3vhFgiWCd2P6NqFpyrQZSTYbrkLpNZ1LjCL), please input now:"
+echo -e "Shutting down daemon, reconfiguring kabberry.conf, we want to know your cold wallet ${GREEN}masternodeprivkey${NC} (example: 887Bmc8UCAuvttkt3vhFgiWCd2P6NqFpyrQZSTYbrkLpNZ1LjCL), please input now:"
 echo""
-read createmasternodekey
-privkey=$(echo $createmasternodekey)
-checkpriv_key=$(echo $createmasternodekey | wc -c)
+read masternodeprivkey
+privkey=$(echo $masternodeprivkey)
+checkpriv_key=$(echo $masternodeprivkey | wc -c)
 if [ "$checkpriv_key" -ne "52" ];
 then
 	echo ""
 	echo "Looks like your $privkey is not correct, it should cointain 52 symbols, please paste it one more time"
-	read createmasternodekey
-privkey=$(echo $createmasternodekey)
-checkpriv_key=$(echo $createmasternodekey | wc -c)
+	read masternodeprivkey
+privkey=$(echo $masternodeprivkey)
+checkpriv_key=$(echo $masternodeprivkey | wc -c)
 
 if [ "$checkpriv_key" -ne "52" ];
 then
-        echo "Something wrong with createmasternodekey, cannot continue" && exit 1
+        echo "Something wrong with masternodeprivkey, cannot continue" && exit 1
 fi
 fi
 echo ""
@@ -322,7 +322,7 @@ rpcallowip=127.0.0.1
 daemon=1
 masternode=1
 masternodeaddr=[$wanipv6]
-createmasternodekey=$privkey
+masternodeprivkey=$privkey
 addnode=77.55.217.107
 addnode=89.65.101.63
 addnode=77.55.216.249
@@ -345,7 +345,7 @@ rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Kabberry blockchain ${NC}"
 echo ""
-wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.0/kabberry-blockchain.zip
+wget https://github.com/KABBERRY/Kabberry-Coin/releases/download/v3.1.99/kabberry-blockchain.zip
 unzip -o kabberry-blockchain.zip
 rm -f  kabberry-blockchain.zip
 
